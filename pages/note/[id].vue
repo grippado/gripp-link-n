@@ -44,7 +44,7 @@ export default {
       
     },
     async getNote() {
-      return await Axios.Get(`http://146.190.12.195:4000/notes/${this.$route.params.id}`, {
+      return await Axios.Get(`https://gripp.run/notes/${this.$route.params.id}`, {
         headers: {
           Authorization: `Bearer ${JWT_FAKEIT}`
         }
@@ -52,7 +52,7 @@ export default {
     },
     async setNote () {
       const postData = { value: localStorage.getItem(`${this.$route.params.id}`) }
-      await Axios.Post(`http://146.190.12.195:4000/notes/${this.$route.params.id}`, postData, {
+      await Axios.Post(`https://gripp.run/notes/${this.$route.params.id}`, postData, {
         headers: {
           Authorization: `Bearer ${JWT_FAKEIT}`
         }
