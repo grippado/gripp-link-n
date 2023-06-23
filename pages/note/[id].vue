@@ -11,10 +11,16 @@
 </template>
 
 <script lang="ts">
+import { Axios } from '../../utils/axios';
+import { debounce } from '../../utils/debounce'
+
+const JWT_FAKEIT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJncmlwcC1hcGkiLCJuYW1lIjoiR2FicmllbCBHcmlwcCIsImlhdCI6MjM5ODU3NjkyNDg3NTMyNH0.vPsDvk5C8kuoENJVVXgdIDWOsavZp7ErCoKh7eU5I5c'
+
 export default {
   data () {
     return {
-      noteValue: '...loading...'
+      noteValue: '...loading...',
+      debouncingCount: 0
     }
   },
   computed: {
@@ -25,18 +31,52 @@ export default {
   methods: {
     onPress(e: any) {
       localStorage.setItem(`${this.$route.params.id}`, `${e.target.value}`);
+      const setNoteDebounced: any = debounce((e: any) => {
+        this.setNote()
+      }, 1000)
+
+      if (this.debouncingCount == 0) {
+        setNoteDebounced(e)
+        this.debouncingCount = 0
+      }
+
+      this.debouncingCount = 1
+      
+    },
+    async getNote() {
+      return await Axios.Get(`http://146.190.12.195:4000/notes/${this.$route.params.id}`, {
+        headers: {
+          Authorization: `Bearer ${JWT_FAKEIT}`
+        }
+      })
+    },
+    async setNote () {
+      const postData = { value: localStorage.getItem(`${this.$route.params.id}`) }
+      await Axios.Post(`http://146.190.12.195:4000/notes/${this.$route.params.id}`, postData, {
+        headers: {
+          Authorization: `Bearer ${JWT_FAKEIT}`
+        }
+      })
+      this.debouncingCount = 0
     }
-    
   },
-  mounted () {
+  async mounted () {
+
+    window.addEventListener('beforeunload', () => {
+      this.setNote()
+    })
+
     if (localStorage.getItem(`${this.$route.params.id}`)) {
       this.noteValue = `${localStorage.getItem(`${this.$route.params.id}`)}`
       return false
     }
-    else if (localStorage.getItem(`${this.$route.params.id}`) === '') {
-      localStorage.removeItem(`${this.$route.params.id}`)
-    }
-    this.noteValue = ''
+
+    const tempGetNote = await this.getNote().then(((response) => {
+      return response.data
+    }))
+
+    this.noteValue = tempGetNote[0]?.value ? `${tempGetNote[0]?.value}` : ''
+
   }
 }
 </script>
