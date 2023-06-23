@@ -65,12 +65,7 @@ export default {
     window.addEventListener('beforeunload', () => {
       this.setNote()
     })
-
-    if (localStorage.getItem(`${this.$route.params.id}`)) {
-      this.noteValue = `${localStorage.getItem(`${this.$route.params.id}`)}`
-      return false
-    }
-
+    
     const tempGetNote = await this.getNote().then(((response) => {
       return response.data
     }))
