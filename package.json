@@ -8,9 +8,6 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "engines": {
-    "node": "18"
-  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@types/node": "^20.3.1",
