@@ -7,7 +7,7 @@
 </script>
 
 <style lang="stylus">
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
   *
     padding 0
     margin 0
@@ -15,7 +15,7 @@
     outline none
     box-sizing border-box
     font-size 16px
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
   html,
   body,
   #__nuxt,
