@@ -13,9 +13,12 @@
     margin 0
     border 0
     outline none
+    list-style none
     box-sizing border-box
     font-size 16px
+    text-decoration none
     font-family: 'Inconsolata', monospace;
+  
   html,
   body,
   #__nuxt,
@@ -23,4 +26,8 @@
     height 100%
     background-color #282a36
     color #FFF
+
+  a:focus,
+  a:hover
+    transition all 0.33s ease-in-out
 </style>
