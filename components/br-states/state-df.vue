@@ -1,0 +1,3 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" width="1080" height="1080" viewBox="-48.2818 15.5018 0.9732999999999947 0.5482000000000014" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: auto; stroke: white; stroke-width: 128px;"><g id="UF53MU" transform="scale(0.0001,-0.0001)"><path id="5300108" d="M-480160,-160497l774,-2l2550,1l3751,-2l-15,137l-602,351l-67,393l146,325l-166,421l125,599l515,810l24,492l-190,137l-24,540l117,310l-557,225l-405,303l0,439l-743,-1l-5421,-3h-193h-2h-201l-1256,-1l3,-1206l-352,-371l-63,-456l332,-123l-8,-318l-342,-476l-388,-333l71,-787l233,-464l-264,-939l1930,-1h667h21Z" class="color0 maptooltip" data-tippy-content="Brasília: 2.817.068 pessoas"></path></g></svg>
+</template>

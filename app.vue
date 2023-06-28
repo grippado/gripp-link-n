@@ -26,7 +26,8 @@
     height 100%
     background-color #282a36
     color #FFF
-
+  a
+    transition all 0.33s ease-in-out
   a:focus,
   a:hover
     transition all 0.33s ease-in-out
