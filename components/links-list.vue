@@ -3,7 +3,7 @@ section
   p.name gabriel gripp
   p.title engineering manager @ pagar.me
   figure
-    img(src="/profile13.jpg")
+    img(src="https://gripp.run/img?img=https://gripp.run/static/profile13.jpg&quality=1")
   ul
     li(v-for="link in links")
       a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
