@@ -1,12 +1,13 @@
 <template lang="pug">
 article
-  //- nuxt-gripp
   LinksList
 </template>
 
 <script lang="ts">
-export default {
-  head() {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  head () {
     return {
       title: 'gripp.link',
       meta: [
@@ -16,8 +17,7 @@ export default {
           content: 'Home page description'
         }
       ],
-    }
+    };
   }
-}
-
+});
 </script>
