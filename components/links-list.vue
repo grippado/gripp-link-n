@@ -1,5 +1,6 @@
 <template lang="pug">
 section
+  //- | {{ data }}
   p.name gabriel gripp
   p.title engineering manager @ 
     em pagar.me
@@ -10,22 +11,11 @@ section
       a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
 </template>
 
-<script lang="ts">
-import { ref } from 'vue'
-import { staticLinks, staticImageUrl } from '../data/static'
+<script setup lang="ts">
+  const { data } = await useFetch('/api/links')
 
-export default {
-  setup () {
-    const links = ref(staticLinks)
-    const imageUrl = ref(staticImageUrl)
-
-    return {
-      links,
-      imageUrl
-    }
-  }
-}
-
+  const links = ref(data?.value?.staticLinks)
+  const imageUrl = ref(data?.value?.staticImageUrl)
 </script>
 
 <style lang="stylus" scoped>

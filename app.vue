@@ -3,7 +3,13 @@
 </template>
 
 <script setup lang="ts">
-  const route = useRoute()
+const route = useRoute()
+const title = ref('My title')
+
+useSeoMeta({
+  title,
+  description: () => `description: ${title.value}`
+})
 </script>
 
 <style lang="stylus">
