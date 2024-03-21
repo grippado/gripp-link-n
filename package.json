@@ -5,7 +5,6 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "start": "nuxt start",
-    "prisma": "npx prisma studio",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -16,16 +15,12 @@
     "@types/node": "^20.11.0",
     "jest": "^29.7.0",
     "nuxt": "^3.9.1",
-    "prisma": "^5.8.0",
     "stylus": "^0.62.0"
   },
   "dependencies": {
-    "@prisma/client": "^5.8.0",
     "axios": "^1.6.5",
     "dotenv": "^16.3.1",
-    "pug": "^3.0.2",
-    "sqlite3": "^5.1.7",
-    "utilities-js": "github:mundipagg/utilities-js#v2.11.1"
+    "pug": "^3.0.2"
   },
   "version": "1.0.0",
   "engines": {

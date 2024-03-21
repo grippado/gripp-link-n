@@ -14,10 +14,6 @@ section
 </template>
 
 <script setup lang="ts">
-  // const { data } = await useFetch('/api/links')
-  // const links = ref(data?.value?.staticLinks)
-  // const imageUrl = ref(data?.value?.staticImageUrl)
-
   const links = [
     {
       "id": 1,
