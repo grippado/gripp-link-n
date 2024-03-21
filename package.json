@@ -4,6 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "nuxt start",
     "prisma": "npx prisma studio",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -23,6 +24,7 @@
     "axios": "^1.6.5",
     "dotenv": "^16.3.1",
     "pug": "^3.0.2",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "utilities-js": "github:mundipagg/utilities-js#v2.11.1"
   }
 }
