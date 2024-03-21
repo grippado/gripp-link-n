@@ -9,8 +9,8 @@ section
   ul
     li(v-for="link in links")
       a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
-    li(@click="testeTokenize")
-      a teste tokenize {{ pkTeste }}
+    //li(@click="testeTokenize")
+    //  a teste tokenize {{ pkTeste }}
 </template>
 
 <script setup lang="ts">
