@@ -46,7 +46,7 @@ section
       "colorFg": "#4267B2"
     }
   ]
-  const imageUrl = "https://gripp.run/img?img=https://gripp.run/static/profile13.jpg&quality=13&grey=true"
+  const imageUrl = "https://gripp.run/img?img=https://gripp.link/profile.jpg&quality=17"
   
   // const pkTeste = 'pk_E0BgbJzHOJSogo7R' //Prod Gabriel
   // const pkTeste = 'pk_9lM8qv1iJQsa3OZe' //Prod Luidgi
