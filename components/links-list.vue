@@ -3,14 +3,12 @@ section
   //- | {{ data }}
   p.name gabriel gripp
   p.title engineering manager @ 
-    em pagar.me
+    em pagar.me [StoneCo]
   figure
     img(:src="imageUrl")
   ul
     li(v-for="link in links")
       a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
-    //li(@click="testeTokenize")
-    //  a teste tokenize {{ pkTeste }}
 </template>
 
 <script setup lang="ts">
@@ -47,42 +45,6 @@ section
     }
   ]
   const imageUrl = "https://gripp.run/img?img=https://gripp.link/profile.jpg&quality=17"
-  
-  // const pkTeste = 'pk_E0BgbJzHOJSogo7R' //Prod Gabriel
-  // const pkTeste = 'pk_9lM8qv1iJQsa3OZe' //Prod Luidgi
-  const pkTeste = 'pk_test_lMjNYjiQRSgmxrPO'  //Sandbox Luidgi
-  // const pkTeste = 'pk_test_67AJG6DFQf1VdXYO'  //Sandbox Irroba
-  // const pkTeste = 'ppk_5qdEnO9iWHdZ3v6V'  //Prod Irroba
-
-  const testeTokenize = () => {
-    // console.log('teste')
-    {
-      const options = {
-        method: 'POST',
-        headers: {
-          accept: 'application/json', 'content-type': 'application/json'
-        },
-        body: JSON.stringify({
-          card: {
-            number: '4000000000000010',
-            holder_name: 'Fulano de Tal',
-            holder_document: '24920347634',
-            exp_month: '11',
-            exp_year: '30',
-            cvv: '699',
-            brand: 'visa',
-            label: 'visa'
-          },
-          type: 'card'
-        })
-      };
-
-      fetch(`https://api.pagar.me/core/v5/tokens?appId=${pkTeste}`, options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-    }
-  }
 </script>
 
 <style lang="stylus" scoped>
