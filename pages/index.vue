@@ -1,4 +1,9 @@
 <template lang="pug">
-article
-  LinksList
+LinksList
 </template>
+
+<script setup lang="ts">
+definePageMeta({
+  layout: 'default'
+})
+</script>
