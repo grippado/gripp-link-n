@@ -135,7 +135,7 @@ body
     article
       .link-list
         flex-direction row
-@media (max-height: 320px)
+@media (max-height: 345px)
   body
     article
       .link-list
