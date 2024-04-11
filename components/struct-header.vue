@@ -1,7 +1,9 @@
 <template lang="pug">
 header
-  .set-theme(@click="applyLightTheme")
-    span
+  .set-theme(@click="applyLightTheme" aria-controls="theme")
+    label theme
+    span.light-text LIGHT
+    span.dark-text DARK
 </template>
 
 <script lang="ts" setup>
@@ -17,31 +19,40 @@ header
   padding 0.5rem
   border-bottom 1px solid rgba(255, 255, 255, 0.3)
   width 100vw
+  height 40px
   display flex
   justify-content flex-end
+  align-items center
+  label
+    font-size .5rem
+    height 10px
   .set-theme
     cursor pointer
     color #FFF
     background-color transparent
-    border 1px solid rgba(255, 255, 255, 0.3)
     border-radius 0.9rem
     width 50px
-    height 23px
+    height 40px
     position relative
-    self-align center
+    text-align center
     span
-      position absolute
-      left 5px
-      top -1px
-      &::before
-        content '⋆☀︎'
+      text-align center
+      font-size 1rem
+      height 14px
+      display block
+      overflow hidden
+      &.light-text
+        height 14px
         color yellow
-        font-size 1.3rem
+      &.dark-text
+        height 0
+        color darkblue
     &.light
-      border 1px solid rgba(40 42 54, 0.4)
+      label
+        color #282a36
       span
-        left 22px
-        &::before
-          content '☾⋆'
-          color darkblue
+        &.light-text
+          height 0
+        &.dark-text
+          height 14px
 </style>

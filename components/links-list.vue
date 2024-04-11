@@ -34,7 +34,7 @@ section.link-list
     {
       "id": 4,
       "url": "https://twitter.com/grippado",
-      "label": "twitter",
+      "label": "x/twitter",
       "colorFg": "#1DA1F2"
     },
     {
@@ -77,7 +77,6 @@ body
       ul
         width 100%
         max-width 333px
-        height 460px
         li
           margin 1.3rem 0
           height 45px
@@ -113,7 +112,9 @@ body
           max-width 100%
           li
             width 100%
+            height 55px
             margin .25rem 0
             a
+              padding 1rem
               border-radius 0
 </style>
