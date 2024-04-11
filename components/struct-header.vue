@@ -1,7 +1,7 @@
 <template lang="pug">
 header
-  .set-theme(@click="applyLightTheme" aria-controls="theme")
-    label theme
+  .set-theme(@click="applyLightTheme")
+    label goto theme
     span.light-text LIGHT
     span.dark-text DARK
 </template>
@@ -10,6 +10,7 @@ header
 const applyLightTheme = () => {
   document.body.classList.toggle('light')
   document.querySelector('.set-theme')?.classList.toggle('light')
+  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark')
 }
 </script>
 

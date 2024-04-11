@@ -34,7 +34,7 @@ section.link-list
     {
       "id": 4,
       "url": "https://twitter.com/grippado",
-      "label": "x/twitter",
+      "label": "x~twitter",
       "colorFg": "#1DA1F2"
     },
     {
@@ -66,6 +66,7 @@ body
         &.title
           font-size 1.2rem
           font-weight 700
+          color #FFF
           em
             color rgb(113, 162, 0)
             font-style normal
@@ -97,9 +98,10 @@ body
               transform scale(1.07)
   &.light
     article
-      section
+      .link-list
         p
-          &.name
+          &.name,
+          &.title
             color #282a36
           a
             background-color lightness(#D3D3D3, 33%)
