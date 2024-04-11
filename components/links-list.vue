@@ -56,10 +56,10 @@ body
       justify-content center
       flex-direction column
       height 100%
+      padding-top calc(40px + 1rem)
       p
         margin-bottom 1.3rem
         &.name
-          transition all 0.33s ease-in-out
           font-size 1.8rem
           font-weight 400
           color #FFF
@@ -102,9 +102,18 @@ body
         p
           &.name
             color #282a36
-            transition all 0.32s ease-in-out
           a
             background-color lightness(#D3D3D3, 33%)
             color #282a36
-            transition all 0.3s ease-in-out
+@media (max-width: 500px)
+  body
+    article
+      .link-list
+        ul
+          max-width 100%
+          li
+            width 100%
+            margin .25rem 0
+            a
+              border-radius 0
 </style>
