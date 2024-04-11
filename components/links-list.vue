@@ -1,11 +1,11 @@
 <template lang="pug">
 section.link-list
-  //- | {{ data }}
-  p.name gabriel gripp
-  p.title engineering manager @ 
-    em pagar.me [StoneCo]
-  figure
-    img(:src="imageUrl")
+  .card-info-img
+    p.name gabriel gripp
+    p.title engineering manager
+      em pagar.me [StoneCo]
+    figure
+      img(:src="imageUrl")
   ul
     li(v-for="link in links")
       a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
@@ -56,25 +56,33 @@ body
       justify-content center
       flex-direction column
       height 100%
-      padding-top calc(40px + 1rem)
-      p
-        margin-bottom 1.3rem
-        &.name
-          font-size 1.8rem
-          font-weight 400
-          color #FFF
-        &.title
-          font-size 1.2rem
-          font-weight 700
-          color #FFF
-          em
-            color rgb(113, 162, 0)
-            font-style normal
-      figure
-        img
-          width 100%
-          max-width 199px
-          border-radius 50%
+      padding-top 40px
+      .card-info-img
+        display flex
+        align-items center
+        justify-content center
+        flex-direction column
+        width 35%
+        p
+          margin-bottom 1.3rem
+          &.name
+            font-size 1.8rem
+            font-weight 400
+            color #FFF
+          &.title
+            font-size 1.2rem
+            font-weight 700
+            color #FFF
+            text-align center
+            em
+              display block
+              color rgb(113, 162, 0)
+              font-style normal
+        figure
+          img
+            width 100%
+            max-width 199px
+            border-radius 50%
       ul
         width 100%
         max-width 333px
@@ -110,6 +118,8 @@ body
   body
     article
       .link-list
+        .card-info-img
+          width 100%
         ul
           max-width 100%
           li
@@ -119,4 +129,10 @@ body
             a
               padding 1rem
               border-radius 0
+
+@media (max-height: 670px)
+  body
+    article
+      .link-list
+        flex-direction row
 </style>
