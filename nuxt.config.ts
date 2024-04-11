@@ -1,14 +1,11 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  modules: [
-    '@vite-pwa/nuxt'
-  ],
+  modules: [],
   devtools: {
     enabled: true,
-
     timeline: {
-      enabled: true
+      enabled: false
     }
   }
 })
