@@ -56,4 +56,7 @@ header
           height 0
         &.dark-text
           height 14px
+@media (max-height: 320px)
+  header
+    display none
 </style>

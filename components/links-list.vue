@@ -130,9 +130,21 @@ body
               padding 1rem
               border-radius 0
 
-@media (max-height: 670px)
+@media (max-height: 650px)
   body
     article
       .link-list
         flex-direction row
+@media (max-height: 320px)
+  body
+    article
+      .link-list
+        padding 0
+        justify-content space-evenly
+        .card-info-img
+          p
+            margin-bottom .5rem
+        ul
+          li
+            margin .5rem 0
 </style>
