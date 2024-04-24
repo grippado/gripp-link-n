@@ -8,7 +8,7 @@ section.link-list
       img(:src="imageUrl")
   ul
     li(v-for="link in links")
-      a(:href='link.url', :style="{'background': link.colorFg}") {{ link.label }}
+      a(:href='link.url', :style="{'background': link.colorBg}") {{ link.label }}
 </template>
 
 <script setup lang="ts">
@@ -17,31 +17,37 @@ section.link-list
       "id": 1,
       "url": "https://linkedin.com/in/grippado",
       "label": "linkedin",
-      "colorFg": "#0e76a8"
+      "colorBg": "#0e76a8"
     },
     {
       "id": 2,
       "url": "https://instagram.com/grippado",
       "label": "instagram",
-      "colorFg": "linear-gradient(135deg, rgba(64,93,230,1) 0%, rgba(91,81,216,1) 10%, rgba(131,58,180,1) 20%, rgba(193,53,132,1) 30%, rgba(225,48,108,1) 40%, rgba(253,29,29,1) 50%, rgba(245,96,64,1) 60%, rgba(247,119,55,1) 70%, rgba(252,175,69,1) 80%, rgba(255,220,128,1) 90%, rgba(255,220,128,1) 100%)"
+      "colorBg": "linear-gradient(135deg, rgba(64,93,230,1) 0%, rgba(91,81,216,1) 10%, rgba(131,58,180,1) 20%, rgba(193,53,132,1) 30%, rgba(225,48,108,1) 40%, rgba(253,29,29,1) 50%, rgba(245,96,64,1) 60%, rgba(247,119,55,1) 70%, rgba(252,175,69,1) 80%, rgba(255,220,128,1) 90%, rgba(255,220,128,1) 100%)"
     },
     {
       "id": 3,
       "url": "https://github.com/grippado",
       "label": "github",
-      "colorFg": "#333333"
+      "colorBg": "#333333"
     },
     {
       "id": 4,
-      "url": "https://twitter.com/grippado",
-      "label": "x~twitter",
-      "colorFg": "#1DA1F2"
+      "url": "https://www.last.fm/user/grippado",
+      "label": "last.fm",
+      "colorBg": "#b90000"
     },
     {
       "id": 5,
+      "url": "https://twitter.com/grippado",
+      "label": "x~twitter",
+      "colorBg": "#1DA1F2"
+    },
+    {
+      "id": 6,
       "url": "https://facebook.com/grippado",
       "label": "facebook",
-      "colorFg": "#4267B2"
+      "colorBg": "#4267B2"
     }
   ]
   const imageUrl = "https://gripp.run/img?img=https://gripp.link/profile.jpg&quality=17"
