@@ -1,5 +1,5 @@
 <template lang="pug">
-section.link-list
+section.link-list.sec-wh
   .card-info-img
     p.name gabriel gripp
     p.title engineering manager
@@ -62,7 +62,6 @@ body
       justify-content center
       flex-direction column
       height 100%
-      padding-top 40px
       .card-info-img
         display flex
         align-items center
@@ -120,6 +119,11 @@ body
           a
             background-color lightness(#D3D3D3, 33%)
             color #282a36
+@media (max-height: 650px)
+  body
+    article
+      .link-list
+        flex-direction row
 @media (max-width: 500px)
   body
     article
@@ -135,12 +139,6 @@ body
             a
               padding 1rem
               border-radius 0
-
-@media (max-height: 650px)
-  body
-    article
-      .link-list
-        flex-direction row
 @media (max-height: 345px)
   body
     article

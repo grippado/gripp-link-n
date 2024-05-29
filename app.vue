@@ -28,6 +28,7 @@ useSeoMeta({
     transition all 0.33s ease-in-out
   a
     cursor pointer
+    color #FFF
 
   html,
   body,
@@ -40,8 +41,12 @@ useSeoMeta({
     color #FFF
     header
       background-color #282a36
+    .sec-wh
+      padding-top 40px
   // light theme
   body.light
+    a
+      color #282a36
     article
       background-color #D3D3D3
       color #282a36

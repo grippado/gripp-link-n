@@ -1,5 +1,6 @@
 <template lang="pug">
 header
+  a(href="/") gripp.link
   .set-theme(@click="applyLightTheme")
     label goto theme
     span.light-text LIGHT
@@ -7,22 +8,31 @@ header
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue'
+
 const applyLightTheme = () => {
   document.body.classList.toggle('light')
   document.querySelector('.set-theme')?.classList.toggle('light')
   localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark')
 }
+
+onMounted(() => {
+  if (localStorage.getItem('theme') === 'light') {
+    applyLightTheme()
+  }
+})
+
 </script>
 
 <style lang="stylus" scoped>
 header
   position fixed
-  padding 0.5rem
+  padding 0.5rem 1rem
   border-bottom 1px solid rgba(255, 255, 255, 0.3)
   width 100vw
   height 40px
   display flex
-  justify-content flex-end
+  justify-content space-between
   align-items center
   label
     font-size .5rem
