@@ -65,28 +65,21 @@ onMounted(() => {
 
   const backgroundImages: Array<string> = [
     '/praca-da-liberdade.jpeg',
-    '/belo-horizonte-conheca-a-rica-cultura-e-gastronomia-da-cidade-mineira-149_widelg.jpg',
-    '/morar-em-Belo-Horizonte.jpg.webp',
+    '/belo-horizonte-praca-do-papa.jpg',
+    '/morar-em-Belo-Horizonte.jpg',
     '/praca-da-liberdade2.jpeg',
-    '/morar-em-Belo-Horizonte2.jpeg'
+    '/morar-em-Belo-Horizonte2.jpeg',
+    '/bhz-viaduto-santa-teresa.jpeg',
+    '/belo-horizonte-pampulha.jpg'
   ]
-  
-  const sequencilizeBg = () => {
-    let index = 0
-    return () => {
-      const bg = backgroundImages[index]
-      index = index === backgroundImages.length - 1 ? 0 : index + 1
-      document.querySelector('.ctdn-bg')?.setAttribute('style', `background-image: url('${bg}')`)
-    }
-  }
+
   const randomizeBg = () => {
     const randomIndex = Math.floor(Math.random() * backgroundImages.length)
     const randomBg = backgroundImages[randomIndex]
     document.querySelector('.ctdn-bg')?.setAttribute('style', `background-image: url('${randomBg}')`)
   }
 
-  // randomizeBg()
-  timer = setInterval(sequencilizeBg, 5000)
+  setInterval(randomizeBg, 10000)
 
 })
 
@@ -99,7 +92,7 @@ useSeoMeta({
 
 <style lang="stylus" scoped>
 .ctdn-bg
-  background url('/praca-da-liberdade.jpeg')
+  background-image url('/praca-da-liberdade2.jpeg')
   background-repeat no-repeat
   background-position center center
   background-size cover
