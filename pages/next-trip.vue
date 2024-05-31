@@ -48,8 +48,8 @@ onMounted(() => {
                                     </div>`
     }
   }
-  showRemaining()
-  // timer = setInterval(showRemaining, 1000)
+  //showRemaining()
+  timer = setInterval(showRemaining, 1000)
 
   const backgroundImages: Array<string> = [
     '/praca-da-liberdade.jpeg',
