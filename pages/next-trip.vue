@@ -13,16 +13,16 @@ section.ctdn-bg.sec-wh
   background-repeat no-repeat
   background-position center center
   background-size cover
-  height 100vh
+  height 100%
   display flex
   justify-content center
   align-items center
   &:before
     content ''
-    position fixed
-    top 40px
+    position absolute
+    top 0
     left 0
-    width 100%
+    width calc(100% - (250px + 30px))
     height 100%
     background rgba(0, 0, 0, 0.67)
     z-index 333
@@ -32,4 +32,14 @@ body.light
   .ctdn-bg
     &:before
       background rgba(211, 211, 211, 0.66)
+
+// MEDIA QUERIES
+@media (max-width: 820px)
+  .ctdn-bg
+    height 100vh
+    &:before
+      width 100%
+      height 100%
+      background rgba(0, 0, 0, 0.67)
+      z-index 333
 </style>

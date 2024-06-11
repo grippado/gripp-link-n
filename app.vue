@@ -14,6 +14,8 @@ useSeoMeta({
 </script>
 
 <style lang="stylus">
+  $menu-width = 250px
+
   @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
   *
     padding 0
@@ -34,15 +36,15 @@ useSeoMeta({
   body,
   #__nuxt
     height 100%
+    overflow hidden
 
   article
     height 100%
-    background-color #282a36
+    background-color #212223
     color #FFF
+    padding 30px
     header
       background-color #282a36
-    .sec-wh
-      padding-top 40px
   // light theme
   body.light
     a
@@ -53,4 +55,7 @@ useSeoMeta({
       header
         background-color #D3D3D3
         border-bottom 1px solid rgba(40 42 54, 0.4)
+@media (max-width: 820px)
+  article
+    padding 10px
 </style>

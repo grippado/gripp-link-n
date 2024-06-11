@@ -1,5 +1,5 @@
 <template lang="pug">
-LinksList
+BodyAbout
 </template>
 
 <script setup lang="ts">

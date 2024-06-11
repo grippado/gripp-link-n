@@ -50,7 +50,7 @@ section.link-list.sec-wh
       "colorBg": "#4267B2"
     }
   ]
-  const imageUrl = "https://gripp.run/img?img=https://gripp.link/profile.jpg&quality=17"
+  const imageUrl = "https://gripp.link/profile.jpg"
 </script>
 
 <style lang="stylus">
@@ -96,7 +96,7 @@ body
           height 45px
           a
             background-color lightness(#282a36, 33%)
-            border-radius 1rem
+            border-radius .55rem
             padding .69rem 1rem
             color #FFF
             display block

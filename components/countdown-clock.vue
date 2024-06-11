@@ -113,7 +113,7 @@ body.light
       color rgba(#282a36, 0.9)
 
 // MEDIA QUERIES
-@media (max-width: 500px)
+@media (max-width: 600px)
   .ctdn-bg
     .countdown
       flex-direction column
