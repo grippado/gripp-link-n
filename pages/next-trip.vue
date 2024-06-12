@@ -27,12 +27,6 @@ section.ctdn-bg.sec-wh
     background rgba(0, 0, 0, 0.67)
     z-index 333
 
-// LIGHT MODE
-body.light
-  .ctdn-bg
-    &:before
-      background rgba(211, 211, 211, 0.66)
-
 // MEDIA QUERIES
 @media (max-width: 820px)
   .ctdn-bg

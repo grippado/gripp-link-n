@@ -45,16 +45,8 @@ useSeoMeta({
     padding 30px
     header
       background-color #282a36
-  // light theme
-  body.light
-    a
-      color #282a36
-    article
-      background-color #D3D3D3
-      color #282a36
-      header
-        background-color #D3D3D3
-        border-bottom 1px solid rgba(40 42 54, 0.4)
+
+// MEDIA QUERIES
 @media (max-width: 820px)
   article
     padding 10px

@@ -9,14 +9,9 @@ nav
       a(:href='link.url', :style="{'color': link.colorBg}")
         span.desk {{ link.label }}
         span.mobi {{ link.acronym }}
-  //- .set-theme(@click="applyLightTheme")
-  //-   label goto theme
-  //-   span.light-text LIGHT
-  //-   span.dark-text DARK
 </template>
 
 <script lang="ts" setup>
-import { onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -65,19 +60,6 @@ const links = [
     "colorBg": "#4267B2"
   }
 ]
-
-const applyLightTheme = () => {
-  document.body.classList.toggle('light')
-  document.querySelector('.set-theme')?.classList.toggle('light')
-  localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark')
-}
-
-onMounted(() => {
-  if (localStorage.getItem('theme') === 'light') {
-    applyLightTheme()
-  }
-})
-
 </script>
 
 <style lang="stylus" scoped>
