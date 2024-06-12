@@ -14,7 +14,7 @@ article
   display flex
   flex-direction row
   width 100%
-  height calc(100vh - 60px)
+  height calc(100dvh - 60px)
   background-color #282a36
   border 3px solid rgba(0, 0, 0, 0.6)
   border-radius 15px
@@ -26,7 +26,7 @@ article
     height 100%
 @media (max-width: 820px)
   .wrapper
-    height calc(100vh - 20px)
+    height calc(100dvh - 20px)
     :deep(section)
       width 100%
 </style>

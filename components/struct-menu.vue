@@ -83,7 +83,7 @@ onMounted(() => {
 <style lang="stylus" scoped>
 nav
   width 250px
-  height calc(100vh - 90px)
+  height calc(100dvh - 90px)
   position fixed
   top 45px
   bottom unset
