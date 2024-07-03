@@ -58,6 +58,13 @@ const links = [
     "label": "facebook",
     "acronym": "fb",
     "colorBg": "#4267B2"
+  },
+  {
+    "id": 7,
+    "url": "https://blog.gripp.link",
+    "label": "blog",
+    "acronym": "bg",
+    "colorBg": "#CD8D00"
   }
 ]
 </script>
