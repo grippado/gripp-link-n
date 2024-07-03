@@ -2,7 +2,7 @@
 section.ctdn-bg.sec-wh
   countdown-clock(
     :title="'gripp.link | Next Trip Date'"
-    :date="'July 3, 2024 21:20:00'"
+    :date="'July 4, 2024 00:50:00'"
     :wrapperClass="'countdown1'"
   )
 </template>
