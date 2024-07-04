@@ -59,8 +59,10 @@ onMounted(() => {
   timer = setInterval(showRemaining, 1000)
 
   const backgroundImages: Array<string> = [
-    '/vitoria1.jpeg',
-    '/vv1.jpeg'
+    // '/vitoria1.jpeg',
+    // '/vv1.jpeg',
+    '/morar-em-Belo-Horizonte.jpg',
+    '/belo-horizonte-pampulha.jpg'
   ]
 
   const randomizeBg = () => {
