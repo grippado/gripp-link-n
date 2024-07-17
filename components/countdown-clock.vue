@@ -34,6 +34,7 @@ onMounted(() => {
       if (countdownElement) {
         countdownElement.innerHTML = 'Aguarde a próxima viagem!'
       }
+      return false
     }
 
     if (countdownElement) {
@@ -61,8 +62,9 @@ onMounted(() => {
   const backgroundImages: Array<string> = [
     // '/vitoria1.jpeg',
     // '/vv1.jpeg',
-    '/morar-em-Belo-Horizonte.jpg',
-    '/belo-horizonte-pampulha.jpg'
+    // '/morar-em-Belo-Horizonte.jpg',
+    // '/belo-horizonte-pampulha.jpg',
+    '/morro-do-cristo.webp'
   ]
 
   const randomizeBg = () => {

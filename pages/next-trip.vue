@@ -2,14 +2,14 @@
 section.ctdn-bg.sec-wh
   countdown-clock(
     :title="'gripp.link | Next Trip Date'"
-    :date="'July 13, 2024 07:00:00'"
+    :date="'July 19, 2024 00:30:00'"
     :wrapperClass="'countdown1'"
   )
 </template>
 
 <style lang="stylus" scoped>
 .ctdn-bg
-  background-image url('/bhz-viaduto-santa-teresa.jpeg')
+  background-image url('/morro-do-cristo.webp')
   background-repeat no-repeat
   background-position center center
   background-size cover
