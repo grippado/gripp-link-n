@@ -4,9 +4,9 @@
     figure
       img(src="https://gripp.link/profile.jpg")
     p.name gabriel gripp
-    p 👨‍💻 Currently working as a Software Engineering Manager at pagar.me [StoneCo]
+    p 👨‍💻 Currently working as a Engineering Manager at isaac
     p ♥️  Passionate about solving problems, developing products, and empowering people
-    p 🛠️ Over 15 years of experience in software development and management
+    p 🛠️ Over 16 years of experience in software development and management
     p 🐙 Living in Brazil 🇧🇷 with my cats, Sancho 🐈‍⬛ and Panqueca 🐈
 </template>
 
