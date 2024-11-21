@@ -62,8 +62,8 @@ onMounted(() => {
   const backgroundImages: Array<string> = [
     // '/vitoria1.jpeg',
     // '/vv1.jpeg',
-    '/morar-em-Belo-Horizonte.jpg',
-    '/belo-horizonte-pampulha.jpg',
+    '/12a-16-800x533.jpg',
+    '/cumuruxatiba-bahia-3.webp'
   ]
 
   const randomizeBg = () => {
