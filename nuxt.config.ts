@@ -41,7 +41,12 @@ export default defineNuxtConfig({
     },
     workbox: {
       navigateFallback: '/',
-      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,webp}']
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,webp}'],
+      maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB - aumenta limite para arquivos grandes
+      globIgnores: [
+        '**/vv1.jpeg', // 3MB - muito grande para precache
+        '**/joint.png' // 3MB - muito grande para precache
+      ]
     },
     client: {
       installPrompt: true,
