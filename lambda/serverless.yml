@@ -1,0 +1,81 @@
+service: joint-count-api
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    JOINT_COUNT_TABLE_NAME: ${self:custom.tableName}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+          Resource:
+            - arn:aws:dynamodb:${self:provider.region}:*:table/${self:custom.tableName}
+
+custom:
+  tableName: joint-count-${self:provider.stage}
+
+resources:
+  Resources:
+    JointCountTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.tableName}
+        AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: userId
+            KeyType: HASH
+        BillingMode: PAY_PER_REQUEST
+        StreamSpecification:
+          StreamViewType: NEW_AND_OLD_IMAGES
+
+package:
+  individually: true
+  patterns:
+    - '!**/*.ts'
+    - '!**/tsconfig.json'
+    - '!**/package-lock.json'
+    - '!**/node_modules/**'
+    - 'get-joint-count/index.js'
+    - 'get-joint-count/node_modules/**'
+    - 'update-joint-count/index.js'
+    - 'update-joint-count/node_modules/**'
+
+functions:
+  getJointCount:
+    handler: get-joint-count/index.handler
+    events:
+      - http:
+          path: joint-count
+          method: get
+          cors: true
+    timeout: 10
+    memorySize: 256
+
+  updateJointCount:
+    handler: update-joint-count/index.handler
+    events:
+      - http:
+          path: joint-count
+          method: put
+          cors: true
+      - http:
+          path: joint-count
+          method: post
+          cors: true
+    timeout: 10
+    memorySize: 256
+
+plugins:
+  - serverless-offline
+

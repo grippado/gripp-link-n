@@ -21,3 +21,10 @@ logs
 .env
 .env.*
 !.env.example
+
+# Lambda build files
+lambda/**/*.js
+!lambda/**/index.js
+lambda/**/node_modules
+lambda/.serverless
+lambda/.aws-sam

@@ -1,0 +1,20 @@
+{
+  "name": "update-joint-count",
+  "version": "1.0.0",
+  "description": "Lambda function to update joint count in DynamoDB",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "package": "npm run build && zip -r function.zip index.js node_modules"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.490.0",
+    "@aws-sdk/lib-dynamodb": "^3.490.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
+    "@types/node": "^20.12.7",
+    "typescript": "^5.4.5"
+  }
+}
+

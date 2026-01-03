@@ -1,0 +1,20 @@
+{
+  "name": "joint-count-lambda",
+  "version": "1.0.0",
+  "description": "Lambda functions for joint count API",
+  "scripts": {
+    "install:all": "cd get-joint-count && npm install && cd ../update-joint-count && npm install",
+    "build:all": "cd get-joint-count && npm run build && cd ../update-joint-count && npm run build",
+    "deploy": "serverless deploy",
+    "deploy:dev": "serverless deploy --stage dev",
+    "deploy:prod": "serverless deploy --stage prod",
+    "remove": "serverless remove",
+    "logs:get": "serverless logs -f getJointCount -t",
+    "logs:update": "serverless logs -f updateJointCount -t"
+  },
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "serverless-offline": "^13.3.0"
+  }
+}
+

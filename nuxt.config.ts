@@ -3,9 +3,29 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   compatibilityDate: '2025-08-07',
   devtools: {
-    enabled: true,
-    timeline: {
-      enabled: false
+    enabled: false
+  },
+  vite: {
+    server: {
+      watch: {
+        ignored: (path: string) => {
+          return path.includes('/lambda/') || path.includes('\\lambda\\')
+        }
+      }
+    }
+  },
+  nitro: {
+    ignore: [
+      'lambda/**'
+    ]
+  },
+  runtimeConfig: {
+    public: {
+      jointCountApiUrl: 'https://zx8085f2yg.execute-api.us-east-1.amazonaws.com/dev',
+      // Password for incrementing joint count (JOINT_COUNT_PASSWORD)
+      jointCountPassword: process.env.JOINT_COUNT_PASSWORD || 'gripp2026!',
+      // Default password for page authentication (GRIPP_LINK_DEFAULT_PASSWD)
+      defaultPassword: process.env.GRIPP_LINK_DEFAULT_PASSWD || 'gripp2026!'
     }
   },
   app: {

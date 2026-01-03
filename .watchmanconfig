@@ -1,0 +1,11 @@
+{
+  "ignore_dirs": [
+    "lambda",
+    "lambda/node_modules",
+    "lambda/get-joint-count/node_modules",
+    "lambda/update-joint-count/node_modules",
+    ".git",
+    "node_modules"
+  ]
+}
+
