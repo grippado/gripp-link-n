@@ -5,6 +5,55 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false
   },
+  modules: [
+    '@vite-pwa/nuxt'
+  ],
+  pwa: {
+    registerType: 'autoUpdate',
+    manifest: {
+      name: 'Gripp Link',
+      short_name: 'Gripp Link',
+      description: 'Personal links and tools',
+      theme_color: '#4CAF50',
+      background_color: '#4CAF50',
+      display: 'standalone',
+      orientation: 'portrait',
+      scope: '/',
+      start_url: '/',
+      icons: [
+        {
+          src: '/pwa-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        },
+        {
+          src: '/pwa-512x512.png',
+          sizes: '512x512',
+          type: 'image/png',
+          purpose: 'any maskable'
+        }
+      ]
+    },
+    workbox: {
+      navigateFallback: '/',
+      globPatterns: ['**/*.{js,css,html,png,svg,ico,jpg,jpeg,webp}']
+    },
+    client: {
+      installPrompt: true,
+      periodicSyncForUpdates: 20
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallbackAllowlist: [/^\/$/],
+      type: 'module'
+    }
+  } as any,
   vite: {
     server: {
       watch: {
