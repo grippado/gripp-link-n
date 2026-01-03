@@ -395,6 +395,7 @@ onMounted(() => {
   align-items center
   background #4CAF50
   padding 1rem
+  padding-bottom 5rem
   overflow-y auto
 
 .container
